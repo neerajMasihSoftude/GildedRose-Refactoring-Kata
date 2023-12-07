@@ -16,16 +16,27 @@ items = [
   Item.new(name="Conjured Mana Cake", sell_in=3, quality=6), # <-- :O
 ]
 
+# My changes for new requirment
+
+# New items to test new requirements
+new_items = [
+  Item.new(name="Conjured Mana Cake", sell_in=3, quality=6),
+  Item.new(name="Aged Brie", sell_in=0, quality=20), # Test Aged Brie after sell-in
+  Item.new(name="Backstage passes to a TAFKAL80ETC concert", sell_in=-1, quality=40), # Test Backstage passes after the concert
+]
+
+all_items = items + new_items # Combine existing and new items
+
 days = 2
 if ARGV.size > 0
   days = ARGV[0].to_i + 1
 end
 
-gilded_rose = GildedRose.new items
+gilded_rose = GildedRose.new all_items
 (0...days).each do |day|
   puts "-------- day #{day} --------"
   puts "name, sellIn, quality"
-  items.each do |item|
+  all_items.each do |item|
     puts item
   end
   puts ""
