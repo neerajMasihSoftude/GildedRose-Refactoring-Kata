@@ -1,0 +1,2 @@
+C:/Ruby32-x64/lib/ruby/3.2.0/rubygems/defaults/operating_system.rb:10: warning: method redefined; discarding old operating_system_defaults
+C:/Ruby32-x64/lib/ruby/3.2.0/rubygems/defaults.rb:269: warning: previous definition of operating_system_defaults was here
